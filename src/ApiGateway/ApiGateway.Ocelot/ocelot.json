@@ -3,6 +3,7 @@
     "BaseUrl": "https://localhost:5123"
   },
   "Routes": [
+    //products
     {
       "DownstreamPathTemplate": "/api/v1/products",
       "DownstreamScheme": "https",
@@ -51,5 +52,6 @@
       "UpstreamPathTemplate": "/products/{productId}",
       "UpstreamHttpMethod": [ "PUT" ]
     }
+    //
   ]
 }
