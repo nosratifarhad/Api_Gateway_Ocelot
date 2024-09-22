@@ -51,7 +51,31 @@
       ],
       "UpstreamPathTemplate": "/products/{productId}",
       "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //users
+    {
+      "DownstreamPathTemplate": "/api/v1/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7108
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/users/{usersId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7108
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{usersId}",
+      "UpstreamHttpMethod": [ "GET" ]
     }
-    //
   ]
 }
