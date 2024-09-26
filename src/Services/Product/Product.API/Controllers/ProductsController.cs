@@ -6,7 +6,6 @@ using Product.API.ViewModels.ProductViewModels;
 
 namespace Product.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {

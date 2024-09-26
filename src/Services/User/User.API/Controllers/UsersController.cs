@@ -29,15 +29,15 @@ namespace User.API.Controllers
         [HttpPost("/api/users")]
         public async Task<IActionResult> CreateUser(CreateUserInputModel inputModel)
         {
-            int usersId = await Task.FromResult(new Faker().Random.Number(1, 5));
+            int userId = await Task.FromResult(new Faker().Random.Number(1, 5));
 
-            return CreatedAtRoute(nameof(GetUser), new { usersId }, new { UsersId = usersId });
+            return CreatedAtRoute(nameof(GetUser), new { userId }, new { UserId = userId });
         }
 
         /// <summary>
         /// Get User
         /// </summary>
-        /// <param name="usersId"></param>
+        /// <param name="userId"></param>
         /// <returns></returns>
         [HttpGet("/api/users/{userId:int}", Name = nameof(GetUser))]
         public async Task<IActionResult> GetUser(int userId)
@@ -50,7 +50,7 @@ namespace User.API.Controllers
         /// <summary>
         /// Update User
         /// </summary>
-        /// <param name="usersId"></param>
+        /// <param name="userId"></param>
         /// <param name="inputModel"></param>
         /// <returns></returns>
         [HttpPut("/api/users/{userId:int}")]
@@ -67,7 +67,7 @@ namespace User.API.Controllers
         /// <summary>
         /// Delete User
         /// </summary>
-        /// <param name="usersId"></param>
+        /// <param name="userId"></param>
         /// <returns></returns>
         [HttpDelete("/api/users/{userId:int}")]
         public async Task<IActionResult> DeleteUser(int userId)
